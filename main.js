@@ -120,7 +120,7 @@ document.addEventListener("click", (e) => {
                     if (spansWord.length == randomValueValue.length) {
                         setTimeout(() => {
                             location.reload();
-                        }, 1300);
+                        }, 1100);
                     }
                 });
             }
@@ -170,5 +170,5 @@ function endGame() {
     
     setTimeout(() => {
         location.reload();
-    }, 1700);
+    }, 1500);
 }
