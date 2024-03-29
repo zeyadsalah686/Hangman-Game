@@ -112,7 +112,7 @@ document.addEventListener("click", (e) => {
                         if (theClikedLetter == theChosenWord[theChosenWord.length - 1]) {
                             setTimeout(() => {
                                 location.reload();
-                            }, 4200);
+                            }, 1500);
                         }
                     }
                 });
@@ -163,5 +163,5 @@ function endGame() {
     
     setTimeout(() => {
         location.reload();
-    }, 3300);
+    }, 1700);
 }
