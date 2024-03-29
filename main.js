@@ -97,6 +97,9 @@ document.addEventListener("click", (e) => {
 
         // The Chosen Word
         let theChosenWord = Array.from(randomValueValue.toLowerCase());
+
+        // The Spans Word
+        let spansWord = "";
         
         theChosenWord.forEach((wordLetter, wordIndex) => {
             // If The Clicked Letter Equal To One Of The Chosen Word Letter
@@ -108,12 +111,16 @@ document.addEventListener("click", (e) => {
                 guessSpans.forEach((span, spanIndex) => {
                     if (wordIndex === spanIndex) {
                         span.innerHTML = theClikedLetter;
+                    }
 
-                        if (theClikedLetter == theChosenWord[theChosenWord.length - 1]) {
-                            setTimeout(() => {
-                                location.reload();
-                            }, 1500);
-                        }
+                                        spansWord += span.innerHTML;
+                    
+                    console.log(spansWord);
+
+                    if (spansWord.length == randomValueValue.length) {
+                        setTimeout(() => {
+                            location.reload();
+                        }, 1300);
                     }
                 });
             }
